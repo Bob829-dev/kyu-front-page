@@ -1,0 +1,240 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.newsletter-container {
+    background-color: #1e964f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 25px;
+    width: 100%;
+    max-width: 100%;
+}
+.newsletter-container{
+    background-color: #1e964f;
+}
+
+.newsletter-container .icon-container {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.newsletter-container a:not(.icon-link) {
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Navigation styling - Full width layout */
+nav {
+    background-color: #1e964f;
+    padding: 15px 0;
+    border-bottom: 1px solid#1e964f;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 40px;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 35px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.nav-container a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-container a:hover {
+    color: #1e964f;
+}
+
+/* Remove any br elements styling */
+br {
+    display: none;
+}
+
+/* Ensure no horizontal scrolling on body */
+body {
+    overflow-x: hidden;
+}
+/* Welcome section styling */
+.welcome-section {
+    background-color: #1e964f;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.welcome-message {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+    .newsletter-container {
+        gap: 15px;
+        padding: 8px 0;
+    }
+    
+    .newsletter-container a {
+        font-size: 12px;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-right: 0;
+        margin-bottom: 0px;
+    }
+    
+    .nav-container {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .nav-container a {
+        font-size: 14px;
+    }
+    
+    .welcome-message {
+        font-size: 28
+    }
+
+header, .newsletter-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+/* Nuclear option - completely break out of container */
+.newsletter-container {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: auto !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    padding: 10px 20px !important;
+}
+
+/* Then push content down */
+body {
+    padding-top: 50px !important;
+}
+/* Center the navigation with logo on left */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    max-height: 100%;
+    margin-right: 0;
+    position: absolute;
+    left: 20px;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-container a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 50px 0;
+    white-space: nowrap;
+}
+/* Make social media icons white */
+.icon-link {
+    color: white !important;
+}
+
+.icon-link i {
+    color: white !important;
+}
+
+/* Ensure the icon background colors don't override the white */
+.icon-link.facebook,
+.icon-link.instagram,
+.icon-link.x,
+.icon-link.youtube,
+.icon-link.linkedin,
+.icon-link.whatsapp {
+    background-color: transparent !important;
+}
